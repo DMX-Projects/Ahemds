@@ -7,7 +7,7 @@ const ContactInfo: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      primary: 'contact@ahmeds.com',
+      primary: 'contact@edge2cloud.com',
       secondary: 'response within 2 hours',
       color: 'blue'
     },
@@ -41,7 +41,7 @@ const ContactInfo: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-800">
+    <section className="min-h-screen py-12 bg--to-br  from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
       <div className="px-6 lg:px-12 xl:px-24">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
@@ -49,7 +49,7 @@ const ContactInfo: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8">
+          <h2 className="text-3xl md:text-4xl  font-bold text-slate-900 dark:text-white mb-8">
             Get in <span className="gradient-text">Touch</span>
           </h2>
 

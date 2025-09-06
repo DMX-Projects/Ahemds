@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import HeroSection from './components/HeroSection';
 import PartnerCategories from './components/PartnerCategories';
 import PartnershipBenefits from './components/PartnershipBenefits';
+import OurPartnershipOthers from './components/OurPartnershipOthers';
+import OurPartnershipCloud from './components/OurPartnershipCloud';
 
 const Partnerships: React.FC = () => {
   return (
@@ -15,6 +17,8 @@ const Partnerships: React.FC = () => {
       <HeroSection />
       <PartnerCategories />
       <PartnershipBenefits />
+      <OurPartnershipOthers />
+      <OurPartnershipCloud />
     </motion.div>
   );
 };

@@ -56,9 +56,9 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-6xl md:text-8xl font-black text-slate-900 dark:text-white mb-6"
+            className="text-6xl md:text-7xl font-black text-slate-900 dark:text-white mb-6"
           >
-            Ahmed<span className="gradient-text">s</span>
+            <span className="gradient-text">Edge2Cloud</span>
           </motion.h1>
 
           {/* Animated Tagline */}

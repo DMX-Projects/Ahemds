@@ -17,31 +17,62 @@ const PartnerCategories: React.FC = () => {
     { name: 'Lenovo', category: 'Hardware', type: 'Servers, PCs, Mobile', logo: '💼' },
     { name: 'ASUS', category: 'Hardware', type: 'Workstations, Networking', logo: '⚡' },
     { name: 'Samsung', category: 'Hardware', type: 'Displays, Storage, Mobile', logo: '📱' },
+
     
     // Cloud Platforms
     { name: 'AWS', category: 'Cloud', type: 'Public Cloud, AI/ML Services', logo: '☁️' },
     { name: 'Microsoft Azure', category: 'Cloud', type: 'Hybrid Cloud, M365 Integration', logo: '🔷' },
     { name: 'Google Cloud', category: 'Cloud', type: 'AI, Analytics, Kubernetes', logo: '🌐' },
     { name: 'Oracle Cloud', category: 'Cloud', type: 'Database, Enterprise Apps', logo: '🗄️' },
-    
+    { name: 'JIO Cloud', category: 'Cloud', type: 'Cloud Infrastructure, AI/ML', logo: '☁️' },
+    { name: 'Sify Technologies', category: 'Cloud', type: 'Cloud Services, Data Centers', logo: '🏢' },
+    { name: 'CtrlS', category: 'Cloud', type: 'Data Center, Cloud Services', logo: '🏢' },
+    { name: 'Yotta', category: 'Cloud', type: 'Data Center, Cloud Services', logo: '🏢' },
+    { name: 'Digital Connections', category: 'Cloud', type: 'Cloud Services, IT Solutions', logo: '🌐' },
+    { name: 'NTT Data', category: 'Cloud', type: 'Cloud Services, IT Solutions', logo: '🌐' },
+    { name: 'STT Data', category: 'Cloud', type: 'Data Center, Cloud Services', logo: '🏢' },
+    { name: 'neysa.ai', category: 'Cloud', type: 'AI Solutions, Cloud Services', logo: '🤖' },
+
     // Security
     { name: 'CrowdStrike', category: 'Security', type: 'Endpoint Protection, EDR', logo: '🛡️' },
     { name: 'SonicWall', category: 'Security', type: 'Firewalls, Secure Access', logo: '🔒' },
     { name: 'Cisco Security', category: 'Security', type: 'Network Security, Zero Trust', logo: '🔐' },
     { name: 'Fortinet', category: 'Security', type: 'Next-Gen Firewalls, SD-WAN', logo: '🛡️' },
     { name: 'Palo Alto', category: 'Security', type: 'NGFW, Cloud Security', logo: '🔥' },
-    
+    { name: 'Check Point', category: 'Security', type: 'Network Security, Cloud Security', logo: '🛡️' },
+    { name: 'Allied Telesis', category: 'Security', type: 'Network Security, Switches', logo: '🔐' },
+
+
     // Software
     { name: 'Microsoft', category: 'Software', type: 'Operating Systems, Productivity', logo: '🖥️' },
     { name: 'VMware', category: 'Software', type: 'Virtualization, Cloud Management', logo: '☁️' },
     { name: 'Oracle', category: 'Software', type: 'Database, Enterprise Applications', logo: '📊' },
     { name: 'Adobe', category: 'Software', type: 'Creative Suite, Document Management', logo: '🎨' },
-    
+    { name: 'Autodesk', category: 'Software', type: 'Design Software, 3D Modeling', logo: '🖌️' },
+    { name: 'CorelDRAW', category: 'Software', type: 'Design Software, Vector Graphics', logo: '🎨' },
     // SaaS Solutions
     { name: 'JumpCloud', category: 'SaaS', type: 'Identity Management, MDM', logo: '🔑' },
     { name: 'ServiceNow', category: 'SaaS', type: 'ITSM, Workflow Automation', logo: '⚙️' },
     { name: 'Zoom', category: 'SaaS', type: 'Video Conferencing, UCaaS', logo: '📹' },
-    { name: 'Slack', category: 'SaaS', type: 'Team Collaboration, Integration', logo: '💬' }
+    { name: 'Slack', category: 'SaaS', type: 'Team Collaboration, Integration', logo: '💬' },
+    { name: 'hrms', category: 'SaaS', type: 'HR Management, Payroll', logo: '👥' },
+    { name: 'Zoho', category: 'SaaS', type: 'CRM, Productivity Suite', logo: '📈' },
+    { name: 'oracle idam', category: 'SaaS', type: 'Identity and Access Management', logo: '🔐' },
+    {name:'jira', category:'SaaS', type:'Project Management, Issue Tracking', logo:'📋'} ,
+    {name:'ivanti', category:'SaaS', type:'IT Asset Management, ITSM', logo:'🛠️'} ,
+    {name:'cymmetrric', category:'SaaS', type:'Security Operations, Threat Detection', logo:'🛡️'}   ,
+    {name:'knight fintech', category:'SaaS', type:'Cybersecurity, Managed Security Services', logo:'🛡️'}    ,
+    {name:'symphony', category:'SaaS', type:'Collaboration, Communication', logo:'💬'} ,
+
+
+
+    // Networking
+    { name: 'Ubiquiti', category: 'Networking', type: 'Wireless, Routers, Switches', logo: '📡' },
+    { name: 'TP-Link', category: 'Networking', type: 'Routers, Switches, Access Points', logo: '📶' },
+    { name: 'Cisco', category: 'Networking', type: 'Routers, Switches, Wireless', logo: '🌐' },
+    { name: 'Juniper', category: 'Networking', type: 'Routers, Switches, Security', logo: '🔗' },
+
+    
   ];
 
   const filteredPartners = partners.filter(partner => {

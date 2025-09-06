@@ -43,7 +43,7 @@ const PartnershipBenefits: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-800">
+    <section className="min-h-screen py-12 bg--to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

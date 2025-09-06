@@ -7,25 +7,29 @@ const PartnershipsPreview: React.FC = () => {
   const partnerCategories = [
     {
       title: 'Core Hardware',
-      partners: ['HPE', 'Dell', 'Apple', 'Lenovo', 'ASUS'],
+      partners: ['HPE', 'Dell', 'Apple', 'Lenovo', 'ASUS','Cisco'],
       color: 'blue'
     },
     {
       title: 'Cloud Platforms',
-      partners: ['AWS', 'Azure', 'GCP', 'OCI'],
+      partners: ['AWS', 'Azure', 'GCP', 'OCI', 'Jio Cloud', 'IBM Cloud',],
       color: 'emerald'
     },
     {
       title: 'Security',
-      partners: ['CrowdStrike', 'SonicWall', 'Cisco', 'Fortinet'],
+      partners: ['CrowdStrike', 'SonicWall', 'Cisco', 'Fortinet','allied Telesis', ],
       color: 'purple'
     },
     {
       title: 'Software',
-      partners: ['Microsoft', 'VMware', 'Oracle', 'Adobe'],
+      partners: ['Microsoft', 'VMware', 'Oracle', 'Adobe','rhel','mongo db',],
       color: 'cyan'
     }
   ];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const getColorClasses = (color: string) => {
     const colorMap = {
@@ -131,7 +135,11 @@ const PartnershipsPreview: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center"
         >
-          <Link to="/partnerships" className="btn-secondary group">
+          <Link 
+            to="/partnerships"
+            onClick={scrollToTop}
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl group"
+          >
             Explore Partnerships
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>

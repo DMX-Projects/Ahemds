@@ -78,7 +78,7 @@ const EndComputeServices: React.FC = () => {
   ];
 
   return (
-    <section id="end-compute" className="py-24 bg-slate-50 dark:bg-slate-800">
+    <section id="end-compute" className="min-h-screen py-12 bg--to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -95,7 +95,7 @@ const EndComputeServices: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Bento Grid Layout */}
+        {/* Bento Grid Layout - Fixed Alignment */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
@@ -104,9 +104,7 @@ const EndComputeServices: React.FC = () => {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`card card-hover group ${
-                index === 0 || index === 2 ? 'md:col-span-2 lg:col-span-1' : ''
-              } ${index === 1 ? 'lg:row-span-2' : ''}`}
+              className="card card-hover group h-full flex flex-col"
             >
               <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <service.icon className="w-7 h-7 text-white" />
@@ -120,7 +118,7 @@ const EndComputeServices: React.FC = () => {
                 {service.description}
               </p>
 
-              <ul className="space-y-2">
+              <ul className="space-y-2 flex-grow">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-sm text-slate-500 dark:text-slate-400">
                     <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full mr-3 flex-shrink-0"></div>

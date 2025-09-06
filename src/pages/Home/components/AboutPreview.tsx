@@ -25,6 +25,10 @@ const AboutPreview: React.FC = () => {
     }
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <section className="py-24 bg-white dark:bg-slate-900">
       <div className="container-custom">
@@ -85,7 +89,11 @@ const AboutPreview: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center"
         >
-          <Link to="/about" className="btn-primary group inline-flex items-center">
+          <Link 
+            to="/about" 
+            onClick={scrollToTop}
+            className="btn-primary group inline-flex items-center"
+          >
             Learn More About Us
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
