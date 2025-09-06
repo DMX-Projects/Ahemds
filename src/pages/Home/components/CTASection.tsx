@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, MessageCircle, Calendar } from 'lucide-react';
 
 const CTASection: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background */}
@@ -47,6 +51,7 @@ const CTASection: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <Link
               to="/contact"
+              onClick={scrollToTop}
               className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 group inline-flex items-center"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
@@ -56,6 +61,7 @@ const CTASection: React.FC = () => {
             
             <Link
               to="/contact"
+              onClick={scrollToTop}
               className="border-2 border-white/30 hover:border-emerald-400 text-white hover:text-emerald-400 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 group inline-flex items-center"
             >
               <Calendar className="w-5 h-5 mr-2" />

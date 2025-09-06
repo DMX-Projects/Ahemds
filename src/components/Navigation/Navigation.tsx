@@ -18,9 +18,18 @@ const Navigation: React.FC = () => {
     { name: 'Services', path: '/services' },
     { name: 'Partnerships', path: '/partnerships' },
     { name: 'Solutions', path: '/solutions' },
-    { name: 'Case Studies', path: '/case-studies' },
+    // { name: 'Case Studies', path: '/case-studies' },
     { name: 'Contact', path: '/contact' },
   ];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNavClick = () => {
+    scrollToTop();
+    setIsMenuOpen(false); // Close mobile menu if open
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,13 +52,17 @@ const Navigation: React.FC = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link 
+            to="/" 
+            className="flex items-center space-x-3 group"
+            onClick={scrollToTop}
+          >
             <div className="relative">
               <Zap className="w-8 h-8 text-blue-600 group-hover:text-emerald-600 transition-colors duration-300" />
               <div className="absolute inset-0 bg-blue-600 group-hover:bg-emerald-600 rounded-full opacity-20 scale-150 blur-sm transition-all duration-300"></div>
             </div>
-            <span className="text-2xl font-bold text-slate-900 dark:text-white">
-              Ahmed<span className="gradient-text">s</span>
+            <span className="text-2xl font-bold text-transparent bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text">
+              Edge2Cloud
             </span>
           </Link>
 
@@ -59,6 +72,7 @@ const Navigation: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.path}
+                onClick={scrollToTop}
                 className={`relative text-sm font-medium transition-colors duration-300 group ${
                   location.pathname === item.path
                     ? 'text-blue-600 dark:text-blue-400'
@@ -120,7 +134,7 @@ const Navigation: React.FC = () => {
                   >
                     <Link
                       to={item.path}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={handleNavClick}
                       className={`block px-6 py-3 text-lg font-medium transition-colors duration-300 ${
                         location.pathname === item.path
                           ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
