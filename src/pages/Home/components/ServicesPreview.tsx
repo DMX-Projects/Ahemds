@@ -216,7 +216,7 @@ const ServicesPreview = () => {
 
   return (
     <>
-      <section className="min-h-screen py-12 bg--to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
+      <section className=" py-12 bg--to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16 opacity-0 animate-fade-in">
             <h2 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
