@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
             <Link to="/" className="flex items-center space-x-3 mb-6">
               <Zap className="w-8 h-8 text-blue-400" />
               <span className="text-2xl font-bold text-transparent bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text">
-                Edge2Cloud<span className="text-emerald-400"></span>
+                Freshroots Technologies Private Limited<span className="text-emerald-400"></span>
               </span>
             </Link>
             
@@ -66,15 +66,15 @@ const Footer: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400" />
-                <span className="text-slate-300">contact@edge2cloud.com</span>
+                <span className="text-slate-300">kafeel@freshroottech.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-slate-300">+1 (555) 123-4567</span>
+                <span className="text-slate-300">+91 8310699171</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-slate-300">Tech Hub, Innovation District</span>
+                <span className="text-slate-300">F5, B3 Kumar Castles, Palm Grove enclave, Gubbalala, Banglore 570062</span>
               </div>
             </div>
           </div>
@@ -142,7 +142,7 @@ const Footer: React.FC = () => {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <p className="text-slate-400 text-sm">
-              © 2025 Edge2Cloud Systems Integration. All rights reserved.
+              © 2025 Freshroots Technologies Private Limited. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <Link to="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-300">

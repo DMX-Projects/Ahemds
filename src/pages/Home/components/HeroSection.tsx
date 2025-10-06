@@ -20,111 +20,122 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28">
       {/* Animated Background */}
       <div className="absolute inset-0 parallax-bg"></div>
       
-      {/* Floating Geometric Shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="floating-shape w-64 h-64 bg-gradient-to-r from-blue-400 to-emerald-400 top-20 left-10"
-          animate={{ y: [0, -20, 0], rotate: [0, 90, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="floating-shape w-32 h-32 bg-gradient-to-r from-emerald-400 to-blue-400 top-40 right-20"
-          animate={{ y: [0, 20, 0], rotate: [0, -90, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        />
-        <motion.div
-          className="floating-shape w-48 h-48 bg-gradient-to-r from-blue-500 to-emerald-500 bottom-20 left-1/4"
-          animate={{ y: [0, -15, 0], rotate: [0, 45, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 container-custom text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
-        >
-          {/* Company Name */}
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-6xl md:text-7xl font-black text-slate-900 dark:text-white mb-6"
+      {/* Main Container - Full Width */}
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[calc(100vh-7rem)] max-w-none">
+          
+          {/* Left Side - Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left w-full"
           >
-            <span className="gradient-text">Edge2Cloud</span>
-          </motion.h1>
+            {/* Main Heading */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mb-6"
+            >
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                <span className="text-slate-800 dark:text-white">Delivering Digital</span>
+                <br />
+                <span className="gradient-text">Excellence</span>
+              </h1>
+            </motion.div>
 
-          {/* Animated Tagline */}
-          <div className="h-24 mb-8 flex items-center justify-center">
-            <motion.h2
-              key={currentText}
+            {/* Animated Tagline */}
+            <div className="h-12 md:h-16 mb-6 flex items-center justify-center lg:justify-start">
+              <motion.h2
+                key={currentText}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className="text-xl md:text-2xl lg:text-3xl font-semibold gradient-text"
+              >
+                {textArray[currentText]}
+              </motion.h2>
+            </div>
+
+            {/* Subtitle */}
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="text-3xl md:text-5xl font-bold gradient-text"
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed"
             >
-              {textArray[currentText]}
-            </motion.h2>
-          </div>
+              Solutions for Modern Enterprises. Comprehensive IT services combining deep 
+              technical expertise with practical business application. Gain the strategic 
+              edge your organization needs to excel in today's digital landscape.
+            </motion.p>
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-12 leading-relaxed"
-          >
-            Your trusted systems integration partner, delivering seamless technology solutions 
-            that transform businesses and drive innovation across industries.
-          </motion.p>
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6 mb-12"
+            >
+              <Link to="/contact" className="btn-primary group">
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+              
+              <Link to="/about" className="btn-outline group">
+                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
+                Learn More
+              </Link>
+            </motion.div>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
-          >
-            <Link to="/contact" className="btn-primary group">
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
-            
-            <Link to="/about" className="btn-outline group">
-              <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
-              Learn More
-            </Link>
+            {/* Trust Indicators */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-8"
+            >
+              <div className="flex items-center space-x-2">
+                <Sparkles className="w-5 h-5 text-emerald-500" />
+                <span className="text-slate-600 dark:text-slate-400">Founded 2025</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Sparkles className="w-5 h-5 text-blue-500" />
+                <span className="text-slate-600 dark:text-slate-400">Enterprise Focus</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Sparkles className="w-5 h-5 text-emerald-500" />
+                <span className="text-slate-600 dark:text-slate-400">Certified Professionals</span>
+              </div>
+            </motion.div>
           </motion.div>
 
-          {/* Trust Indicators */}
+          {/* Right Side - Image */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="mt-16 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-12"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative w-full"
           >
-            <div className="flex items-center space-x-2">
-              <Sparkles className="w-5 h-5 text-emerald-500" />
-              <span className="text-slate-600 dark:text-slate-400">Founded 2025</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Sparkles className="w-5 h-5 text-blue-500" />
-              <span className="text-slate-600 dark:text-slate-400">Enterprise Focus</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Sparkles className="w-5 h-5 text-emerald-500" />
-              <span className="text-slate-600 dark:text-slate-400">Certified Professionals</span>
+            <div className="relative overflow-hidden rounded-2xl">
+              <img 
+                src="/images/image.png" 
+                alt="Professional team collaboration - delivering digital excellence for modern enterprises"
+                className="w-full h-auto object-cover"
+              />
+              
+              {/* Image Overlay with Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-transparent to-emerald-900/20"></div>
+              
+              
             </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll Indicator */}

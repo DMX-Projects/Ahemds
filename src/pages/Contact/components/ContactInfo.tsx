@@ -7,29 +7,29 @@ const ContactInfo: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      primary: 'contact@edge2cloud.com',
-      secondary: 'response within 2 hours',
+      primary: 'kafeel@freshroottech.com',
+      secondary: '',
       color: 'blue'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      primary: '+1 (555) 123-4567',
-      secondary: 'Mon-Fri 9AM-6PM EST',
+      primary: '+91 8310699171',
+      secondary: '',
       color: 'emerald'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      primary: 'Tech Hub, Innovation District',
-      secondary: 'Schedule an appointment',
+      primary: 'F5, B3 Kumar Castles, Palm Grove enclave, Gubbalala, Banglore 570062',
+      secondary: '',
       color: 'purple'
     },
     {
       icon: MessageCircle,
       title: 'Live Chat',
       primary: 'Available 24/7',
-      secondary: 'Instant technical support',
+      secondary: '',
       color: 'cyan'
     }
   ];
@@ -41,20 +41,21 @@ const ContactInfo: React.FC = () => {
   ];
 
   return (
-    <section className="min-h-screen py-12 bg--to-br  from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
-      <div className="px-6 lg:px-12 xl:px-24">
+    <section className="min-h-screen bg-white dark:bg-slate-900 flex items-center">
+      <div className="px-6 lg:px-12 xl:px-24 w-full">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          className="h-full flex flex-col justify-center"
         >
-          <h2 className="text-3xl md:text-4xl  font-bold text-slate-900 dark:text-white mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8">
             Get in <span className="gradient-text">Touch</span>
           </h2>
 
           {/* Contact Methods */}
-          <div className="space-y-6 mb-12">
+          <div className="space-y-6 mb-12 flex-grow">
             {contactMethods.map((method, index) => (
               <motion.div
                 key={method.title}
@@ -88,7 +89,7 @@ const ContactInfo: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="card"
+            className="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-lg mb-8"
           >
             <div className="flex items-center mb-6">
               <Clock className="w-6 h-6 text-blue-600 mr-3" />
@@ -117,7 +118,7 @@ const ContactInfo: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-8 space-y-4"
+            className="space-y-4"
           >
             <button className="w-full btn-primary group">
               <Calendar className="w-5 h-5 mr-2" />

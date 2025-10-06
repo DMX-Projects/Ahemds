@@ -60,7 +60,7 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-green-800 to-emerald-400 bg-clip-text text-transparent;
   }
   
   .floating-shape {

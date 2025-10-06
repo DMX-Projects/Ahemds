@@ -12,18 +12,18 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          50: '#eff6ff',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          900: '#1e3a8a',
-        },
-        secondary: {
           50: '#ecfdf5',
           500: '#10b981',
           600: '#059669',
           700: '#047857',
           900: '#064e3b',
+        },
+        secondary: {
+         50: '#eff6ff',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          900: '#1e3a8a',
         }
       },
       animation: {

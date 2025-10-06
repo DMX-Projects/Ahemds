@@ -8,7 +8,7 @@ const Timeline: React.FC = () => {
       year: '2025',
       quarter: 'Q1',
       title: 'Company Founded',
-      description: 'Edge2Cloud established with vision to revolutionize systems integration',
+      description: 'Freshroots Technologies Private Limited established with vision to revolutionize systems integration',
       icon: Rocket,
       completed: true
     },
