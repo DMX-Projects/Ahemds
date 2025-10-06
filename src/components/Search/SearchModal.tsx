@@ -14,7 +14,7 @@ const SearchModal: React.FC = () => {
     { title: 'HPE Partnership', path: '/partnerships', type: 'Partnership' },
     { title: 'AWS Cloud Solutions', path: '/partnerships', type: 'Partnership' },
     { title: 'BFSI Solutions', path: '/solutions#bfsi', type: 'Solution' },
-    { title: 'About Edge2Cloud', path: '/about', type: 'Company' },
+    { title: 'About Freshroots Technologies Private Limited', path: '/about', type: 'Company' },
     { title: 'Contact Us', path: '/contact', type: 'Contact' }
   ];
 

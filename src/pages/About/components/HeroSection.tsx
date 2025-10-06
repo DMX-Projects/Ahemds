@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6">
-            About <span className="gradient-text">Edge2Cloud</span>
+            About <span className="gradient-text">Freshroots Technologies Private Limited</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed">
             We are systems integration specialists committed to bridging the gap between 

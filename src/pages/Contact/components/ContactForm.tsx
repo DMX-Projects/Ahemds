@@ -15,7 +15,6 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3000);
   };
@@ -28,13 +27,14 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-white dark:bg-slate-900">
-      <div className="px-6 lg:px-12 xl:px-24">
+    <section className="min-h-screen py-24 bg-white dark:bg-slate-900 flex items-center">
+      <div className="px-6 lg:px-12 xl:px-24 w-full">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          className="h-full flex flex-col justify-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8">
             Start Your <span className="gradient-text">Integration Journey</span>
@@ -98,7 +98,7 @@ const ContactForm: React.FC = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                  placeholder="+1 (555) 123-4567"
+                  placeholder="+91 XXXXXXXXX"
                 />
               </div>
             </div>
