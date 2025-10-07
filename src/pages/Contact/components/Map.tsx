@@ -21,7 +21,7 @@ const Map: React.FC = () => {
             Our Location
           </h3>
           <p className="text-slate-600 dark:text-slate-400">
-            Tech Hub, Innovation District
+          F5, B3 Kumar Castles, Palm Grove enclave, Gubbalala, Bangalore 570062
           </p>
         </div>
       </div>
