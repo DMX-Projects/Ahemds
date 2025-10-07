@@ -7,7 +7,7 @@ const ContactInfo: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      primary: 'kafeel@freshroottech.com',
+      primary: 'kafeel@freshrootstech.com',
       secondary: '',
       color: 'blue'
     },

@@ -11,12 +11,13 @@ const PartnerCategories: React.FC = () => {
 
   const partners = [
     // Core Hardware
-    { name: 'HPE', category: 'Hardware', type: 'Servers, Storage, Networking', logo: '🏢' },
-    { name: 'Dell', category: 'Hardware', type: 'Servers, Storage, Workstations', logo: '💻' },
+    { name: 'HPE', category: 'Hardware', type:'Endpoints, Servers, Storage, Networking', logo: '🏢' },
+     { name: 'HPI', category: 'Hardware', type: 'Endpoints, Servers, Storage, Networking', logo: '🏢' },
+    { name: 'Dell', category: 'Hardware', type: 'Endpoints, Servers, Storage, Workstations', logo: '💻' },
     { name: 'Apple', category: 'Hardware', type: 'Endpoints, Mobile Devices', logo: '🍎' },
     { name: 'Lenovo', category: 'Hardware', type: 'Servers, PCs, Mobile', logo: '💼' },
     { name: 'ASUS', category: 'Hardware', type: 'Workstations, Networking', logo: '⚡' },
-    { name: 'Samsung', category: 'Hardware', type: 'Displays, Storage, Mobile', logo: '📱' },
+    { name: 'Samsung', category: 'Hardware', type:'Endpoints, Displays, Mobile', logo: '📱' },
 
     
     // Cloud Platforms
@@ -55,14 +56,14 @@ const PartnerCategories: React.FC = () => {
     { name: 'ServiceNow', category: 'SaaS', type: 'ITSM, Workflow Automation', logo: '⚙️' },
     { name: 'Zoom', category: 'SaaS', type: 'Video Conferencing, UCaaS', logo: '📹' },
     { name: 'Slack', category: 'SaaS', type: 'Team Collaboration, Integration', logo: '💬' },
-    { name: 'hrms', category: 'SaaS', type: 'HR Management, Payroll', logo: '👥' },
+    { name: 'HRMS', category: 'SaaS', type: 'HR Management, Payroll', logo: '👥' },
     { name: 'Zoho', category: 'SaaS', type: 'CRM, Productivity Suite', logo: '📈' },
-    { name: 'oracle idam', category: 'SaaS', type: 'Identity and Access Management', logo: '🔐' },
-    {name:'jira', category:'SaaS', type:'Project Management, Issue Tracking', logo:'📋'} ,
-    {name:'ivanti', category:'SaaS', type:'IT Asset Management, ITSM', logo:'🛠️'} ,
-    {name:'cymmetrric', category:'SaaS', type:'Security Operations, Threat Detection', logo:'🛡️'}   ,
-    {name:'knight fintech', category:'SaaS', type:'Cybersecurity, Managed Security Services', logo:'🛡️'}    ,
-    {name:'symphony', category:'SaaS', type:'Collaboration, Communication', logo:'💬'} ,
+    { name: 'Oracle idam', category: 'SaaS', type: 'Identity and Access Management', logo: '🔐' },
+    { name: 'Jira', category: 'SaaS', type: 'Project Management, Issue Tracking', logo: '📋' },
+    {name:'Ivanti', category:'SaaS', type:'IT Asset Management, ITSM', logo:'🛠️'} ,
+    {name:'Cymmetri', category:'SaaS', type:'Security Operations, Threat Detection', logo:'🛡️'}   ,
+    {name:'Knight fintech', category:'SaaS', type:'Cybersecurity, Managed Security Services', logo:'🛡️'}    ,
+    {name:'Symphony', category:'SaaS', type:'Collaboration, Communication', logo:'💬'} ,
 
 
 
