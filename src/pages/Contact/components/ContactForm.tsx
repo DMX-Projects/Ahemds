@@ -2,8 +2,17 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle } from 'lucide-react';
 
+type FormData = {
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  service: string;
+  message: string;
+};
+
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     company: '',
@@ -13,10 +22,29 @@ const ContactForm: React.FC = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+  const formatWhatsAppMessage = (data: FormData) => {
+    let message = `🚀 *New Contact Form Submission*\n\n`;
+    
+    message += `👤 *Name:* ${data.name}\n`;
+    message += `📧 *Email:* ${data.email}\n`;
+    
+    if (data.company) {
+      message += `🏢 *Company:* ${data.company}\n`;
+    }
+    
+    if (data.phone) {
+      message += `📱 *Phone:* ${data.phone}\n`;
+    }
+    
+    if (data.service) {
+      message += `🔧 *Service Interest:* ${data.service}\n`;
+    }
+    
+    message += `\n💬 *Project Details:*\n${data.message}\n\n`;
+    message += `📅 *Submitted:* ${new Date().toLocaleString()}\n`;
+    message += `\n_Sent from Integration Journey Contact Form_`;
+    
+    return message;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -24,6 +52,42 @@ const ContactForm: React.FC = () => {
       ...prev,
       [e.target.name]: e.target.value
     }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    console.log('Form Data:', formData); // Debug log
+    
+    // Format the message for WhatsApp
+    const whatsappMessage = formatWhatsAppMessage(formData);
+    
+    console.log('WhatsApp Message:', whatsappMessage); // Debug log
+    
+    // Your WhatsApp number (replace with your actual number)
+    const whatsappNumber = '918310699171'; // Format: country code + number (no + sign)
+    
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    console.log('WhatsApp URL:', whatsappURL); // Debug log
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
+    
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+      // Reset form after sending
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    }, 3000);
   };
 
   return (
@@ -114,11 +178,11 @@ const ContactForm: React.FC = () => {
                 className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
               >
                 <option value="">Select a service</option>
-                <option value="end-compute">End Compute Solutions</option>
-                <option value="dc-services">Data Center Services</option>
-                <option value="cloud-integration">Cloud Integration</option>
-                <option value="security">Security Solutions</option>
-                <option value="consulting">Consulting Services</option>
+                <option value="End Compute Solutions">End Compute Solutions</option>
+                <option value="Data Center Services">Data Center Services</option>
+                <option value="Cloud Integration">Cloud Integration</option>
+                <option value="Security Solutions">Security Solutions</option>
+                <option value="Consulting Services">Consulting Services</option>
               </select>
             </div>
 
@@ -151,12 +215,12 @@ const ContactForm: React.FC = () => {
               {isSubmitted ? (
                 <>
                   <CheckCircle className="w-5 h-5" />
-                  <span>Message Sent!</span>
+                  <span>Opening WhatsApp...</span>
                 </>
               ) : (
                 <>
                   <Send className="w-5 h-5" />
-                  <span>Send Message</span>
+                  <span>Send via WhatsApp</span>
                 </>
               )}
             </motion.button>

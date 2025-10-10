@@ -70,14 +70,22 @@ const Footer: React.FC = () => {
             
             {/* Contact Information */}
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                <span className="text-slate-300">kafeel@freshrootstech.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                <span className="text-slate-300">+91 8310699171</span>
-              </div>
+              <a 
+                href="mailto:kafeel@freshrootstech.com"
+                className="flex items-center space-x-3 hover:text-blue-400 transition-colors duration-300 group"
+              >
+                <Mail className="w-5 h-5 text-blue-400 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="text-slate-300 group-hover:text-blue-400">kafeel@freshrootstech.com</span>
+              </a>
+              <a 
+                href="https://wa.me/918310699171"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-3 hover:text-blue-400 transition-colors duration-300 group"
+              >
+                <Phone className="w-5 h-5 text-blue-400 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="text-slate-300 group-hover:text-blue-400">+91 8310699171</span>
+              </a>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                 <span className="text-slate-300">

@@ -18,7 +18,7 @@ const HeroSection = () => {
       icon: Users,
       title: 'HRMS',
       color: 'emerald',
-      solutions: ['GreytHR', 'PocketHR']
+      solutions: ['GreytHR', 'Sparsh']
     },
     {
       id: 'idam',
