@@ -172,10 +172,10 @@ const ContactInfo = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      primary: 'kafeel@freshrootstech.com',
+      primary: 'sales@freshrootstech.com',
       secondary: '',
       color: 'blue',
-      href: 'mailto:kafeel@freshrootstech.com',
+      href: 'mailto:sales@freshrootstech.com',
       isExternal: false
     },
     {
@@ -209,7 +209,7 @@ const ContactInfo = () => {
 
   const officeHours = [
     { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM IST' },
-    { day: 'Saturday', hours: '10:00 AM - 2:00 PM IST' },
+    
     { day: 'Sunday', hours: 'Emergency Support Only' }
   ];
 
@@ -238,7 +238,7 @@ const ContactInfo = () => {
       startdt: getDefaultStartDate(),
       enddt: getDefaultEndDate(),
       location: 'Virtual Meeting / Fresh Roots Tech Office',
-      to: 'kafeel@freshrootstech.com'
+      to: 'sales@freshrootstech.com'
     });
     
     return `${baseUrl}?${params.toString()}`;
@@ -298,7 +298,7 @@ DTEND:${event.end}
 SUMMARY:${event.title}
 DESCRIPTION:${event.description}
 LOCATION:${event.location}
-ORGANIZER:mailto:kafeel@freshrootstech.com
+ORGANIZER:mailto:sales@freshrootstech.com
 END:VEVENT
 END:VCALENDAR`;
   };
