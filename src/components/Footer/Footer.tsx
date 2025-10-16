@@ -71,11 +71,11 @@ const Footer: React.FC = () => {
             {/* Contact Information */}
             <div className="space-y-4">
               <a 
-                href="mailto:kafeel@freshrootstech.com"
+                href="mailto:sales@freshrootstech.com"
                 className="flex items-center space-x-3 hover:text-blue-400 transition-colors duration-300 group"
               >
                 <Mail className="w-5 h-5 text-blue-400 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="text-slate-300 group-hover:text-blue-400">kafeel@freshrootstech.com</span>
+                <span className="text-slate-300 group-hover:text-blue-400">sales@freshrootstech.com</span>
               </a>
               <a 
                 href="https://wa.me/918310699171"
