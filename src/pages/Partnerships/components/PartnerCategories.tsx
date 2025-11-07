@@ -56,7 +56,7 @@ const PartnerCategories: React.FC = () => {
     { name: 'ServiceNow', category: 'SaaS', type: 'ITSM, Workflow Automation', logo: '⚙️' },
     { name: 'Zoom', category: 'SaaS', type: 'Video Conferencing, UCaaS', logo: '📹' },
     { name: 'Slack', category: 'SaaS', type: 'Team Collaboration, Integration', logo: '💬' },
-    { name: 'HRMS', category: 'SaaS', type: 'HR Management, Payroll', logo: '👥' },
+    { name: 'SPARSH', category: 'SaaS', type: 'HR Management, Payroll', logo: '👥' },
     { name: 'Zoho', category: 'SaaS', type: 'CRM, Productivity Suite', logo: '📈' },
     { name: 'Oracle idam', category: 'SaaS', type: 'Identity and Access Management', logo: '🔐' },
     { name: 'Jira', category: 'SaaS', type: 'Project Management, Issue Tracking', logo: '📋' },
