@@ -31,21 +31,25 @@ const OurPartnershipOthers = () => {
         { name: 'Honeywell', specialty: 'Access Control' }
       ]
     },
-    {
-      id: 'biometric',
-      title: 'Biometric Solutions',
-      icon: Fingerprint,
-      color: 'emerald',
-      description: 'Identity verification and access control',
-      partners: [
-        { name: 'Talk to Octel', specialty: 'Custom Biometric Solutions', isCustom: true }
-      ]
-    },
-    {
-      id: 'telecom',
-      title: 'Telecom Offerings',
-      icon: Phone,
-      color: 'orange',
+   {
+  id: 'biometric',
+  title: 'Biometric Solutions',
+  icon: Fingerprint,
+  color: 'emerald',
+  description: 'Identity verification and access control',
+  partners: [
+    { 
+      name: 'Sparsh Hi-Tech Security Solutions', 
+      specialty: 'Biometric access control, fingerprint & facial recognition, RFID security, visitor management',
+      isCustom: true 
+    }
+  ]
+},
+{
+  id: 'telecom',
+  title: 'Telecom Offerings',
+  icon: Phone,
+  color: 'orange',
       description: 'Communication infrastructure and services',
       partners: [
         { name: 'Leased Lines', specialty: 'Dedicated Connectivity', isService: true },

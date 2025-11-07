@@ -121,23 +121,26 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
             <div className="flex items-center space-x-6">
               <span className="text-slate-400">Follow us:</span>
-              <div className="flex space-x-4">
-                {[
-                  { icon: Linkedin, href: '#' },
-                  { icon: Twitter, href: '#' },
-                  { icon: Github, href: '#' },
-                ].map(({ icon: Icon, href }, index) => (
-                  <motion.a
-                    key={index}
-                    href={href}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="p-2 bg-slate-800 hover:bg-blue-600 rounded-lg transition-colors duration-300"
-                  >
-                    <Icon className="w-5 h-5" />
-                  </motion.a>
-                ))}
-              </div>
+             <div className="flex space-x-4">
+  {[
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/freshroots-technologies-pvt-ltd/' },
+    { icon: Twitter, href: '#' },
+    { icon: Github, href: '#' },
+  ].map(({ icon: Icon, href }, index) => (
+    <motion.a
+      key={index}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+      className="p-2 bg-slate-800 hover:bg-blue-600 rounded-lg transition-colors duration-300"
+    >
+      <Icon className="w-5 h-5" />
+    </motion.a>
+  ))}
+</div>
+
             </div>
 
             <motion.button

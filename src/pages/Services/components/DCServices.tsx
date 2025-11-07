@@ -219,9 +219,19 @@ const DCServices: React.FC = memo(() => (
           <p className="text-slate-600 dark:text-slate-400 mb-6 max-w-2xl mx-auto">
             Get started with our comprehensive data center services and experience enterprise-grade reliability and performance.
           </p>
-          <button className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-            Get Started Today
-          </button>
+          <button 
+  onClick={() => {
+    const to = 'sales@freshrootstech.com';
+    const subject = encodeURIComponent('Inquiry About Data Center Services');
+    const body = encodeURIComponent('Hi Freshroots Technologies Team,\n\nI am interested in learning more about your Data Center Services.\n\nBest regards');
+    
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  }}
+  className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+>
+  Get Started Today
+</button>
+
         </div>
       </motion.div>
     </div>
