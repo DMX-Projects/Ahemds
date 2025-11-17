@@ -7,7 +7,7 @@ const Team: React.FC = () => {
     {
       name: 'Kafeel Ahmed',
       role: 'Founder & CEO',
-      image: 'images/TeamMember1.jpg',
+      image: 'images/KafeelSir.jpg',
       bio: 'Visionary leader with 20+ years of Industry experience in enterprise technology integration.'
     },
     {
