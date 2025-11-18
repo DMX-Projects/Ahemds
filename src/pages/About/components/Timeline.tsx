@@ -39,7 +39,7 @@ const Timeline: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-slate-900">
+    <section className="py-12 bg-white dark:bg-slate-900">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

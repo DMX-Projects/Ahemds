@@ -29,12 +29,12 @@ const Footer: React.FC = () => {
       { name: 'Cloud Solutions', path: '/solutions#cloud', scrollToTop: true },
       { name: 'BFSI Solutions', path: '/solutions#bfsi', scrollToTop: true },
     ],
-    Resources: [
-      { name: 'Documentation', path: '#', scrollToTop: true },
-      { name: 'Support Center', path: '#', scrollToTop: true },
-      { name: 'Training', path: '#', scrollToTop: true },
-      { name: 'Blog', path: '#', scrollToTop: true },
-    ],
+    // Resources: [
+    //   { name: 'Documentation', path: '#', scrollToTop: true },
+    //   { name: 'Support Center', path: '#', scrollToTop: true },
+    //   { name: 'Training', path: '#', scrollToTop: true },
+    //   { name: 'Blog', path: '#', scrollToTop: true },
+    // ],
   };
 
   const handleLinkClick = (path: string, shouldScrollToTop: boolean) => {
@@ -97,23 +97,23 @@ const Footer: React.FC = () => {
 
           {/* Footer Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h3 className="text-lg font-semibold mb-6 text-white">{category}</h3>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.path}
-                      onClick={() => handleLinkClick(link.path, link.scrollToTop)}
-                      className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+  <div key={category} className="ml-12">  {/* Add left margin here */}
+    <h3 className="text-lg font-semibold mb-6 text-white">{category}</h3>
+    <ul className="space-y-3">
+      {links.map((link) => (
+        <li key={link.name}>
+          <Link
+            to={link.path}
+            onClick={() => handleLinkClick(link.path, link.scrollToTop)}
+            className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
+          >
+            {link.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+))}
         </div>
 
         {/* Social Media & Newsletter */}
@@ -124,8 +124,8 @@ const Footer: React.FC = () => {
              <div className="flex space-x-4">
   {[
     { icon: Linkedin, href: 'https://www.linkedin.com/company/freshroots-technologies-pvt-ltd/' },
-    { icon: Twitter, href: '#' },
-    { icon: Github, href: '#' },
+    // { icon: Twitter, href: '#' },
+    // { icon: Github, href: '#' },
   ].map(({ icon: Icon, href }, index) => (
     <motion.a
       key={index}
