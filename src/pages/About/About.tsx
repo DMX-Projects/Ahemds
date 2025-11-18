@@ -5,6 +5,7 @@ import CompanyValues from './components/CompanyValues';
 import Timeline from './components/Timeline';
 import Team from './components/Team';
 import Approach from './components/Approach';
+import CompetitiveAdvantages from './components/Advantages';
 
 const About: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const About: React.FC = () => {
       <HeroSection />
       <CompanyValues />
       <Approach />
+      <CompetitiveAdvantages />
       <Timeline />
       <Team />
     </motion.div>
