@@ -6,6 +6,8 @@ import PartnershipBenefits from './components/PartnershipBenefits';
 import OurPartnershipOthers from './components/OurPartnershipOthers';
 import OurPartnershipCloud from './components/OurPartnershipCloud';
 import PartnerShipAndNextStep from './components/PartnerShipAndNextStep';
+import PartnershipSaaS from './components/PartnershipSaaS';
+
 
 const Partnerships: React.FC = () => {
   return (
@@ -17,6 +19,7 @@ const Partnerships: React.FC = () => {
     >
       <HeroSection />
       <PartnerCategories />
+      <PartnershipSaaS />
       <PartnershipBenefits />
       <OurPartnershipOthers />
       <OurPartnershipCloud />

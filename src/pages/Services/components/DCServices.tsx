@@ -24,7 +24,7 @@ interface Service {
 const services: Service[] = [
   {
     icon: Server,
-    title: 'Hardware Supply and Deployment',
+    title: 'Device Supply and Deployment',
     description: 'Enterprise-grade servers, storage, and networking equipment.',
     features: [
       'Server/HCI Solutions',

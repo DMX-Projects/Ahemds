@@ -17,7 +17,7 @@ const EndComputeServices: React.FC = () => {
   const services = [
     {
       icon: HardDrive,
-      title: 'Hardware Supply and Deployment',
+      title: 'Device Supply and Deployment',
       description: 'Complete hardware lifecycle management from procurement to deployment.',
       features: ['Procurement Strategy', 'Installation Services', 'Configuration Management', 'Asset Tracking']
     },

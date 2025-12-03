@@ -18,14 +18,14 @@ const HeroSection = () => {
       icon: Users,
       title: 'HRMS',
       color: 'emerald',
-      solutions: ['GreytHR', 'Sparsh']
+      solutions: ['Sparsh']
     },
     {
       id: 'idam',
       icon: Database,
       title: 'IDAM',
       color: 'purple',
-      solutions: ['Cymmetri', 'Archon', 'Oracle', 'Jumpcloud']
+      solutions: ['Cymmetri', 'Archon', 'Jumpcloud']
     },
     {
       id: 'dms',
@@ -44,9 +44,9 @@ const HeroSection = () => {
     {
       id: 'itsm',
       icon: Settings,
-      title: 'ITSM',
+      title: ' ITSM',
       color: 'pink',
-      solutions: ['Symphony.AI', 'Jira', 'Ivanti', 'Service Now']
+      solutions: ['Freshworks', 'Ivanti']
     },
     {
       id: 'crm',
