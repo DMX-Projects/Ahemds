@@ -153,7 +153,7 @@ const PartnershipSaaS = () => {
           
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 sm:mb-6">
-            OUR PARTNERSHIPS - <span className="bg-gradient-to-r from-primary-600 to-secondary-600 text-transparent bg-clip-text">SaaS</span>
+           Our Partnerships - <span className="bg-gradient-to-r from-primary-600 to-secondary-600 text-transparent bg-clip-text">SaaS</span>
           </h2>
 
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-8">
