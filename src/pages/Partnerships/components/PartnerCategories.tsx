@@ -295,7 +295,7 @@ const PartnerCategories: React.FC = () => {
 
   const partners = [
     // Devices (from your existing list)
-    { name: 'HPE', category: 'Devices', type:'Endpoints, Servers, Storage, Networking', logo: '🏢' },
+   
     { name: 'HPI', category: 'Devices', type: 'Endpoints, Servers, Storage, Networking', logo: '🏢' },
     { name: 'Dell', category: 'Devices', type: 'Endpoints, Servers, Storage, Workstations', logo: '💻' },
     { name: 'Apple', category: 'Devices', type: 'Endpoints, Mobile Devices', logo: '🍎' },
