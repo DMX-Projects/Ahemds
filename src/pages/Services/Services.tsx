@@ -4,6 +4,8 @@ import HeroSection from './components/HeroSection';
 import EndComputeServices from './components/EndComputeServices';
 import DCServices from './components/DCServices';
 import ProcessFlow from './components/ProcessFlow';
+import Observability from './components/Observability';
+import FinOpsLLM from './components/FinOpsLLM';
 
 const Services: React.FC = () => {
   return (
@@ -14,6 +16,8 @@ const Services: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <HeroSection />
+      <Observability />
+      <FinOpsLLM />
       <EndComputeServices />
       <DCServices />
       <ProcessFlow />

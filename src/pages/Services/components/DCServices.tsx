@@ -139,7 +139,7 @@ const services: Service[] = [
 ];
 
 const DCServices: React.FC = memo(() => (
-  <section id="dc-services" className="py-24 bg-white dark:bg-slate-900">
+  <section id="dc-services" className="py-10 bg-white dark:bg-slate-900">
     <div className="container-custom">
       {/* Section Header */}
       <motion.div
