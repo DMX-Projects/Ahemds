@@ -7,14 +7,8 @@ const Team: React.FC = () => {
     {
       name: 'Kafeel Ahmed',
       role: 'Founder & CEO',
-      image: 'images/KafeelSir.jpg',
+      image: 'images/KafeelSir2.jpeg',
       bio: 'Visionary leader with 20+ years of Industry experience in enterprise technology integration.'
-    },
-    {
-      name: 'Sania Anum',
-      role: 'COO',
-      image: 'images/TeamMember2.jpg',
-      bio: 'Technology strategist specializing in HR and Operations.'
     },
     {
       name: 'Siddeswara',
@@ -43,7 +37,7 @@ const Team: React.FC = () => {
         </motion.div>
 
         {/* Updated grid layout for proper alignment */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {team.map((member, index) => (
             <motion.div
               key={member.name}
